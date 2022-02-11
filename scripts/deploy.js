@@ -26,7 +26,25 @@ async function main() {
     );
     await helloWorldTokenContract.deployed();
     console.log("HelloWorldToken contract deployed to:", helloWorldTokenContract.address);
+
+    const contractAddresses = {
+        HelloWorldMarket: helloWorldMarketContract.address,
+        HelloWorldToken: helloWorldTokenContract.address,
+    };
+
+    // Store contracts addresses for client
+    storeContractAddresses(contractAddresses);
 }
+
+const storeContractAddresses = (jsonData) => {
+    const fs = require("fs");
+
+    fs.writeFileSync("./client/src/contractAddresses.json", JSON.stringify(jsonData), function (err) {
+        if (err) {
+            console.log(err);
+        }
+    });
+};
 
 // We recommend this pattern to be able to use async/await everywhere
 // and properly handle errors.
