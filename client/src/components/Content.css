@@ -1,0 +1,19 @@
+.Content {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.ItemsContainer {
+    margin-bottom: 50px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.ItemsContainerEmpty {
+    color: gray;
+    margin-top: 25px;
+}
+
+h1 {
+    margin-bottom: 50px;
+}

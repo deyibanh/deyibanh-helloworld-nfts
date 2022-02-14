@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, Container, Navbar } from "react-bootstrap";
 import { CircleFill } from "react-bootstrap-icons";
-import "./Header.css";
 
 function Header(props) {
     const state = props.state;
@@ -12,9 +11,9 @@ function Header(props) {
 
     return (
         <header>
-            <Navbar>
+            <Navbar bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand>Dé Yi Banh says Hello World!</Navbar.Brand>
+                    <Navbar.Brand>The Hello World Collection by Dé Yi Banh</Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text>
@@ -24,6 +23,7 @@ function Header(props) {
                                     <span className="walletInfoLabel">
                                         {state.accounts[0].substring(0, 5) + "..." + state.accounts[0].slice(-4)}
                                     </span>
+                                    {state.accounts[0] === state.owner && <span> (Owner)</span>}
                                 </div>
                             ) : (
                                 <Button variant="outline-primary" size="sm" onClick={requestAccount}>
