@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/deyibanh-helloworld-nfts/static/css/main.96aadeac.css",
+    "main.js": "/deyibanh-helloworld-nfts/static/js/main.ee589e36.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/deyibanh-helloworld-nfts/static/js/787.c4e7f8f9.chunk.js",
+    "index.html": "/deyibanh-helloworld-nfts/index.html",
+    "main.96aadeac.css.map": "/deyibanh-helloworld-nfts/static/css/main.96aadeac.css.map",
+    "main.ee589e36.js.map": "/deyibanh-helloworld-nfts/static/js/main.ee589e36.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/deyibanh-helloworld-nfts/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.96aadeac.css",
+    "static/js/main.ee589e36.js"
+  ]
+}
