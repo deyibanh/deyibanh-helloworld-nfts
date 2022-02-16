@@ -1,42 +1,75 @@
-# Advanced Sample Hardhat Project
+# The Hello World Collection by Dé Yi Banh 
 
-This project demonstrates an advanced Hardhat use case, integrating other tools commonly used alongside Hardhat in the ecosystem.
+## <u>Presentation</u>
 
-The project comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts. It also comes with a variety of other tools, preconfigured to work with the project code.
+This is a sample project to create a buy a simple NFT Collection.
 
-Try running some of the following tasks:
+<img src="./metadata/images/helloworld-ch.png" width="100" height="100" />
+<img src="./metadata/images/helloworld-en.png" width="100" height="100" />
+<img src="./metadata/images/helloworld-fr.png" width="100" height="100" />
+<img src="./metadata/images/helloworld-jp.png" width="100" height="100" />
+<img src="./metadata/images/helloworld-vn.png" width="100" height="100" />
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-npx hardhat help
-REPORT_GAS=true npx hardhat test
-npx hardhat coverage
-npx hardhat run scripts/deploy.js
-node scripts/deploy.js
-npx eslint '**/*.js'
-npx eslint '**/*.js' --fix
-npx prettier '**/*.{json,sol,md}' --check
-npx prettier '**/*.{json,sol,md}' --write
-npx solhint 'contracts/**/*.sol'
-npx solhint 'contracts/**/*.sol' --fix
-```
+Dapp preview (deployed on Polygon Mumbai testnet) is available here :
+https://deyibanh.github.io/deyibanh-helloworld-nfts/ <br />
+Contracts addresses are available:
+- HelloWorldMarket: "0x9a00A1eA4dCf5D1a693Fa897a4792fdb059dcF8A"
+- HelloWorldToken: "0x573fa6c246a794c1C43263F0bbF9a7cf9E64cb60"
 
-# Etherscan verification
+# <u>Setup</u>
 
-To try out Etherscan verification, you first need to deploy a contract to an Ethereum network that's supported by Etherscan, such as Ropsten.
+## 1. Install
 
-In this project, copy the .env.example file to a file named .env, and then edit it to fill in the details. Enter your Etherscan API key, your Ropsten node URL (eg from Alchemy), and the private key of the account which will send the deployment transaction. With a valid .env file in place, first deploy your contract:
+To install the project, open a terminal at the root folder and execute :<br />
+`$> npm install && npx hardhat compile && cd client && npm install`
 
-```shell
-hardhat run --network ropsten scripts/deploy.js
-```
+## 2.Configuration
 
-Then, copy the deployment address and paste it in to replace `DEPLOYED_CONTRACT_ADDRESS` in this command:
+Create your own `.env` file and add your parameters (there is a .env-example file that you can copy):
 
-```shell
-npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS "Hello, Hardhat!"
-```
+- `INFURA_ROPSTEN_URL`: Replace`<YOUR INFURA ID>` by your Infura ID.
+- `PRIVATE_KEY`: Your private key.
+- `OPTIMISM_API_KEY`: Paste your Etherscan API key.
+
+## 3. Deployment
+
+We use Hardhat to deploy the smart contracts.
+
+### 3.1 Compile smart contracts:<br />
+
+`$> npx hardhat compile`
+
+### 3.2 Deploy smart contracts :
+
+On local, open a terminal and run: <br />
+`$> npx hardhat node`<br />
+
+Open another terminal and run : <br />
+`$> npx hardhat run scripts/deploy.js --network <YOUR NETWORK NAME>`
+
+> **Replace `<YOUR NETWORK NAME>` by the network (mainnet, polygon or localhost)**
+
+## 4. Start client
+
+Once contracts are deployed, you can start the client :<br/>
+`$> cd client; npm run start`
+
+## 5. Tests commands
+
+-   Launch test with Hardhat:
+    `$> npx hardhat test`
+
+-   Launch test to a specific folder/file with Hardhat:
+    `$> npx hardhat test <FOLDER_PATH/FILE_PATH>`
+
+
+## 6. Docs
+
+Developers documentation:
+-   [Natspec](./docs/natspec/)
+
+## Copyright & License
+
+License MIT<br />
+
+Copyright (C) 2022
